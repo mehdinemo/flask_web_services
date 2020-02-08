@@ -12,7 +12,7 @@ def main():
     headers = {'content-type': 'application/json'}
 
     try:
-        response = requests.post(url, data=data, headers=headers)
+        response = requests.post(url, data=json.dumps(data), headers=headers)
     except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
     except Exception as err:
