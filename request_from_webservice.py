@@ -1,14 +1,17 @@
-import codecs
 import requests
 import json
 from requests.exceptions import HTTPError
+from config import config
 
 
 def main():
-    with codecs.open('input.json', 'r', encoding="utf-8") as file:
+    with open('input.json', 'r', encoding="utf-8") as file:
         data = json.load(file)
 
-    url = "http://localhost:5000/sample-web-service1/?epsilon=0.3&thresh=1"
+    epsilon = config['epsilon']
+    thresh = config['thresh']
+    url = config['url']
+    url = url.format(epsilon, thresh)
     headers = {'content-type': 'application/json'}
 
     try:
@@ -22,7 +25,8 @@ def main():
     with open('output.json', 'w') as outfile:
         json.dump(response_json, outfile)
 
-    print('done')
+    for k, v in response_json.items():
+        print(k, ":", v)
 
 
 if __name__ == '__main__':

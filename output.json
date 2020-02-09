@@ -1,6 +1,1 @@
-{
-  "core_numbers": "5",
-  "edges_numbers": 7,
-  "epsilon": 0.3,
-  "nodes_number": 6
-}
+{"core_numbers": "5", "edges_numbers": 7, "epsilon": 0.3, "nodes_number": 6}

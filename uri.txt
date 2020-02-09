@@ -1,1 +1,0 @@
-http://localhost:5000/sample-web-service1/?epsilon=0.3&thresh=1
