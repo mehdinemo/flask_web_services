@@ -1,5 +1,5 @@
 #!flask/bin/python
-from sample_clase import SampleClass
+from sample_class import SampleClass
 
 import traceback
 from flask import Flask, request, jsonify
